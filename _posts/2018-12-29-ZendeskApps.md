@@ -7,8 +7,10 @@ Although in the official [documentation](https://develop.zendesk.com/hc/en-us/ar
 
 You just need to install the necessary dependencies:
 ```
-dnf install rubygems ruby-devel gcc-c++ rubygem-rake zlib-devel
+dnf install rubygems ruby-devel gcc-c++ rubygem-rake zlib-devel nodejs
 ```
+
+Nodejs is needed for the *zat validate* command.
 
 And finally install the ruby gem with:
 
