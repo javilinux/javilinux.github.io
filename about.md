@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm just an OpenShift Software Maintenance Engineer at Red Hat.
+I'm just an Software Engineer.
 
 ### Contact me
 
