@@ -1,9 +1,9 @@
 ---
 layout: post
-title: JPGChat CTF Writeup
+title: JPGChat CTF Writeup [DRAFT]
 ---
 
-This is my first CTF Writeup in this case for the [JPGChat room on TryHackMe](https://tryhackme.com/room/jpgchat)
+This is my first CTF Writeup, in this case for the [JPGChat room on TryHackMe](https://tryhackme.com/room/jpgchat).
 
 ## Enumeration
 Nmap show only ports 22 and 3000 open.
